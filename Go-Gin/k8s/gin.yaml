@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gin
+  template:
+    metadata:
+      labels:
+        app: gin
+    spec:
+      containers:
+        - name: gin
+          image: zerohertzkr/dev:latest
+          env:
+            - name: POSTGRES_HOST
+              value: "postgres"
+            - name: POSTGRES_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: POSTGRES_PORT
+            - name: POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: POSTGRES_DB
+          ports:
+            - name: gin
+              containerPort: 8080
+              hostPort: 1547
+          command:
+            - "sh"
+            - "-c"
+            - "tail -f /dev/null"
+          volumeMounts:
+            - mountPath: /home/zerohertz/workspace
+              name: gin-storage
+      volumes:
+        - name: gin-storage
+          hostPath:
+            path: /home/zerohertz/Zerohertz/CRUD/Go-Gin
+            type: DirectoryOrCreate
