@@ -29,34 +29,34 @@ $ go run main.go
 > Server
 
 ```go
-[GIN] 2024/07/30 - 10:35:23 | 201 |    3.302484ms | 121.134.174.157 | POST     "/users"
-[GIN] 2024/07/30 - 10:35:23 | 200 |     656.922µs | 121.134.174.157 | GET      "/users"
-[GIN] 2024/07/30 - 10:35:23 | 200 |     875.115µs | 121.134.174.157 | GET      "/users/1"
-[GIN] 2024/07/30 - 10:35:23 | 200 |    1.526225ms | 121.134.174.157 | PUT      "/users/1"
-[GIN] 2024/07/30 - 10:35:23 | 200 |    1.318683ms | 121.134.174.157 | PATCH    "/users/1"
-[GIN] 2024/07/30 - 10:35:23 | 204 |    1.330195ms | 121.134.174.157 | DELETE   "/users/1"
-[GIN] 2024/07/30 - 10:35:23 | 200 |     235.525µs | 121.134.174.157 | GET      "/users"
+[GIN] 2024/07/30 - 10:45:28 | 201 |    3.023524ms | 000.000.000.000 | POST     "/users"
+[GIN] 2024/07/30 - 10:45:28 | 200 |     531.935µs | 000.000.000.000 | GET      "/users"
+[GIN] 2024/07/30 - 10:45:28 | 200 |      883.79µs | 000.000.000.000 | GET      "/users/1"
+[GIN] 2024/07/30 - 10:45:28 | 200 |     1.78771ms | 000.000.000.000 | PUT      "/users/1"
+[GIN] 2024/07/30 - 10:45:28 | 200 |    1.336857ms | 000.000.000.000 | PATCH    "/users/1"
+[GIN] 2024/07/30 - 10:45:28 | 204 |    1.150564ms | 000.000.000.000 | DELETE   "/users/1"
+[GIN] 2024/07/30 - 10:45:28 | 200 |     241.817µs | 000.000.000.000 | GET      "/users"
 ```
 
 > Client
 
 ```python
-[07/30/24 10:35:23] INFO     [CLIENT] Create User Response: 201                                                                                                      cli.py:19
-                                     {'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'created_at': '2024-07-30T10:35:23.499828+09:00',
+[07/30/24 10:45:28] INFO     [CLIENT] Create User Response: 201                                                                                                   client.py:19
+                                     {'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'created_at': '2024-07-30T10:45:28.388524+09:00',
                              'updated_at': '0001-01-01T00:00:00Z'}
-                    INFO     [CLIENT] Get All Users Response: 200                                                                                                    cli.py:26
-                                     [{'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'created_at': '2024-07-30T10:35:23.499828+09:00',
+                    INFO     [CLIENT] Get All Users Response: 200                                                                                                 client.py:26
+                                     [{'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'created_at': '2024-07-30T10:45:28.388524+09:00',
                              'updated_at': '0001-01-01T00:00:00Z'}]
-                    INFO     [CLIENT] Get User by ID 1 Response: 200                                                                                                 cli.py:35
-                                     {'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'created_at': '2024-07-30T10:35:23.499828+09:00',
+                    INFO     [CLIENT] Get User by ID 1 Response: 200                                                                                              client.py:35
+                                     {'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'created_at': '2024-07-30T10:45:28.388524+09:00',
                              'updated_at': '0001-01-01T00:00:00Z'}
-                    INFO     [CLIENT] Update User 1 Response: 200                                                                                                    cli.py:45
+                    INFO     [CLIENT] Update User 1 Response: 200                                                                                                 client.py:45
                                      {'id': 1, 'username': 'john_doe_updated', 'email': 'john.doe.updated@example.com', 'created_at':
-                             '2024-07-30T10:35:23.499828+09:00', 'updated_at': '2024-07-30T10:35:23.540567908+09:00'}
-                    INFO     [CLIENT] Partial Update User 1 Response: 200                                                                                            cli.py:55
+                             '2024-07-30T10:45:28.388524+09:00', 'updated_at': '2024-07-30T10:45:28.432954349+09:00'}
+                    INFO     [CLIENT] Partial Update User 1 Response: 200                                                                                         client.py:55
                                      {'id': 1, 'username': 'john_doe_updated', 'email': 'john.newemail@example.com', 'created_at':
-                             '2024-07-30T10:35:23.499828+09:00', 'updated_at': '2024-07-30T10:35:23.554918949+09:00'}
-                    INFO     [CLIENT] Delete User 1 Response: 204                                                                                                    cli.py:63
-                    INFO     [CLIENT] Get All Users Response: 200                                                                                                    cli.py:26
+                             '2024-07-30T10:45:28.388524+09:00', 'updated_at': '2024-07-30T10:45:28.447066674+09:00'}
+                    INFO     [CLIENT] Delete User 1 Response: 204                                                                                                 client.py:63
+                    INFO     [CLIENT] Get All Users Response: 200                                                                                                 client.py:26
                                      []
 ```
