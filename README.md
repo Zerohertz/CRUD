@@ -13,7 +13,6 @@ $ kubectl -n crud exec -it deploy/backend -- zsh
 ```
 
 <h3 align="center">API Specification</h3>
-
 <div align="center">
 <img width="400" alt="crud" src="https://github.com/user-attachments/assets/a31ed9a1-7dfc-48b5-830e-f2fc112c9c02">
 
@@ -28,8 +27,7 @@ $ kubectl -n crud exec -it deploy/backend -- zsh
 
 </div>
 
-<h3 align="center">Database Table Schema</h3>
-
+<h3 align="center">Database (PostgreSQL) Table Schema</h3>
 <div align="center">
 
 | Field      | Data Type    | Description        | Constraints                         |
@@ -41,4 +39,7 @@ $ kubectl -n crud exec -it deploy/backend -- zsh
 | created_at | DATETIME     | Creation timestamp | NOT NULL, DEFAULT CURRENT_TIMESTAMP |
 | updated_at | DATETIME     | Update timestamp   | NULL, ON UPDATE CURRENT_TIMESTAMP   |
 
+</div>
+<div align="right">
+    <code>DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}</code>
 </div>
