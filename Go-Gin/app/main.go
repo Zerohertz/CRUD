@@ -43,5 +43,5 @@ func main() {
 	r.PATCH("/users/:id", userHandler.PartiallyUpdateUser)
 	r.DELETE("/users/:id", userHandler.DeleteUser)
 
-	r.Run(":8080")
+	r.Run(":1547")
 }

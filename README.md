@@ -1,5 +1,17 @@
 <h1 align="center">🦀 CRUD 🦀</h1>
 
+```sh
+$ kubectl create ns crud
+namespace/crud created
+$ kubectl -n crud apply -f k8s
+configmap/postgres-config created
+secret/postgres-secret created
+deployment.apps/postgres created
+service/postgres created
+deployment.apps/backend created
+$ kubectl -n crud exec -it deploy/backend -- zsh
+```
+
 <h3 align="center">API Specification</h3>
 
 <div align="center">

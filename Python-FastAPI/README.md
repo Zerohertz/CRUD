@@ -1,15 +1,12 @@
 ## Run
 
+<!-- markdownlint-disable -->
+
 ```sh
-$ kubectl -n crud k8s
-deployment.apps/fastapi created
-configmap/postgres-config created
-secret/postgres-secret created
-deployment.apps/postgres created
-service/postgres created
-$ kubectl -n crud exec -it deploy/fastapi -- zsh
-$ uvicorn app.main:app --host 0.0.0.0
+$ uvicorn app.main:app --host 0.0.0.0 --port 1547
 ```
+
+<!-- markdownlint-enable -->
 
 ## Logs
 

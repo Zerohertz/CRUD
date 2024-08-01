@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gin
+  name: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gin
+      app: backend
   template:
     metadata:
       labels:
-        app: gin
+        app: backend
     spec:
       containers:
-        - name: gin
+        - name: backend
           image: zerohertzkr/dev:latest
           env:
             - name: POSTGRES_HOST
@@ -39,8 +39,8 @@ spec:
                   name: postgres-config
                   key: POSTGRES_DB
           ports:
-            - name: gin
-              containerPort: 8080
+            - name: backend
+              containerPort: 1547
               hostPort: 1547
           command:
             - "sh"
@@ -48,9 +48,9 @@ spec:
             - "tail -f /dev/null"
           volumeMounts:
             - mountPath: /home/zerohertz/workspace
-              name: gin-storage
+              name: backend-storage
       volumes:
-        - name: gin-storage
+        - name: backend-storage
           hostPath:
-            path: /home/zerohertz/Zerohertz/CRUD/Go-Gin
+            path: /home/zerohertz/Zerohertz/CRUD
             type: DirectoryOrCreate

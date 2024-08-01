@@ -13,16 +13,13 @@ $ go get -u gorm.io/driver/postgres
 
 ## Run
 
+<!-- markdownlint-disable -->
+
 ```sh
-$ kubectl -n crud k8s
-deployment.apps/gin created
-configmap/postgres-config created
-secret/postgres-secret created
-deployment.apps/postgres created
-service/postgres created
-$ kubectl -n crud exec -it deploy/gin -- zsh
 $ go run main.go
 ```
+
+<!-- markdownlint-enable -->
 
 ## Logs
 
