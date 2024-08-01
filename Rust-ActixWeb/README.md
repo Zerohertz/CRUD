@@ -39,8 +39,6 @@ Indexes:
 
 ## Run
 
-<!-- markdownlint-disable -->
-
 ```sh
 $ cargo build
 ...
@@ -55,8 +53,6 @@ $ cargo run
      Running `target/debug/app`
 ```
 
-<!-- markdownlint-enable -->
-
 ## Logs
 
 > Server
@@ -69,17 +65,17 @@ $ cargo run
 
 ```python
 $ python client.py
-[08/01/24 20:37:46] INFO     [CLIENT] Create User Response: 201                                                                                                                                                                                                                                      client.py:19
-                                     {'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:37:46', 'updated_at': None}
-                    INFO     [CLIENT] Get All Users Response: 200                                                                                                                                                                                                                                    client.py:26
-                                     [{'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:37:46', 'updated_at': None}]
-                    INFO     [CLIENT] Get User by ID 1 Response: 200                                                                                                                                                                                                                                 client.py:35
-                                     {'id': 1, 'username': 'john_doe', 'email': 'john.doe@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:37:46', 'updated_at': None}
-                    INFO     [CLIENT] Update User 1 Response: 200                                                                                                                                                                                                                                    client.py:45
-                                     {'id': 1, 'username': 'john_doe_updated', 'email': 'john.doe.updated@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:37:46', 'updated_at': None}
-                    INFO     [CLIENT] Partial Update User 1 Response: 200                                                                                                                                                                                                                            client.py:55
-                                     {'id': 1, 'username': 'john_doe_updated', 'email': 'john.newemail@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:37:46', 'updated_at': None}
-                    INFO     [CLIENT] Delete User 1 Response: 204                                                                                                                                                                                                                                    client.py:63
-                    INFO     [CLIENT] Get All Users Response: 200                                                                                                                                                                                                                                    client.py:26
+[08/01/24 20:41:20] INFO     [CLIENT] Create User Response: 201                                                                                                                                                                     client.py:19
+                                     {'id': 2, 'username': 'john_doe', 'email': 'john.doe@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:41:20', 'updated_at': None}
+                    INFO     [CLIENT] Get All Users Response: 200                                                                                                                                                                   client.py:26
+                                     [{'id': 2, 'username': 'john_doe', 'email': 'john.doe@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:41:20', 'updated_at': None}]
+                    INFO     [CLIENT] Get User by ID 2 Response: 200                                                                                                                                                                client.py:35
+                                     {'id': 2, 'username': 'john_doe', 'email': 'john.doe@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:41:20', 'updated_at': None}
+                    INFO     [CLIENT] Update User 2 Response: 200                                                                                                                                                                   client.py:45
+                                     {'id': 2, 'username': 'john_doe_updated', 'email': 'john.doe.updated@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:41:20', 'updated_at': None}
+                    INFO     [CLIENT] Partial Update User 2 Response: 200                                                                                                                                                           client.py:55
+                                     {'id': 2, 'username': 'john_doe_updated', 'email': 'john.newemail@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:41:20', 'updated_at': None}
+                    INFO     [CLIENT] Delete User 2 Response: 204                                                                                                                                                                   client.py:63
+                    INFO     [CLIENT] Get All Users Response: 200                                                                                                                                                                   client.py:26
                                      []
 ```
