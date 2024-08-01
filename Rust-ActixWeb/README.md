@@ -64,7 +64,6 @@ $ cargo run
 > Client
 
 ```python
-$ python client.py
 [08/01/24 20:41:20] INFO     [CLIENT] Create User Response: 201                                                                                                                                                                     client.py:19
                                      {'id': 2, 'username': 'john_doe', 'email': 'john.doe@example.com', 'password': 'securepassword123', 'created_at': '2024-08-01 11:41:20', 'updated_at': None}
                     INFO     [CLIENT] Get All Users Response: 200                                                                                                                                                                   client.py:26
