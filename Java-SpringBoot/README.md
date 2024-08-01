@@ -11,8 +11,7 @@ Project extracted to '/home/zerohertz/workspace/Java-SpringBoot/app'
 ```sh
 $ ./gradlew build
 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
-2024-08-01T21:03:54.338+09:00  INFO 56048 --- [crud] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence u
-nit 'default'
+2024-08-01T21:03:54.338+09:00  INFO 56048 --- [crud] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-08-01T21:03:54.340+09:00  INFO 56048 --- [crud] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-08-01T21:03:54.343+09:00  INFO 56048 --- [crud] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 BUILD SUCCESSFUL in 6s
